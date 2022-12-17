@@ -1,0 +1,13 @@
+const express = require("express");
+const router = express.Router();
+const logoutRoute = require("./logout");
+const successRoute = require("./success");
+const googleCallbackRoute = require("./google_callback");
+const googleFailure = require("./google_failure");
+const googleSignInRoute = require("./googleSignIn");
+router.use(logoutRoute);
+router.use(successRoute);
+router.use(googleCallbackRoute);
+router.use(googleFailure);
+router.use(googleSignInRoute);
+module.exports = router;
